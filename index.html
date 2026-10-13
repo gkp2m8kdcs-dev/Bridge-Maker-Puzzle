@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Maker Puzzle</title>
+<style>
+  :root {
+    --bg-1: #0f172a;
+    --bg-2: #1e293b;
+    --accent: #38bdf8;
+    --accent-2: #f59e0b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  header {
+    text-align: center;
+    padding: 32px 0 48px;
+  }
+  header .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p.subtitle {
+    color: var(--muted);
+    font-size: 18px;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  section h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: var(--accent);
+  }
+  section p { margin-bottom: 12px; color: var(--text); }
+  section ul { margin-left: 20px; margin-bottom: 12px; }
+  section li { margin-bottom: 8px; color: var(--text); }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .feature {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+  .feature h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: var(--accent-2);
+  }
+  .feature p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .links a {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  .links a:hover {
+    background: var(--accent);
+    color: var(--bg-1);
+    text-decoration: none;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 24px 0 0;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">iOS · iPhone · Offline</span>
+      <h1>Bridge Maker Puzzle</h1>
+      <p class="subtitle">Build Toy Bridges. Swap the Cards. Watch the Car Roll.</p>
+    </header>
+
+    <section>
+      <h2>About the App</h2>
+      <p>
+        Bridge Maker Puzzle is a single-device puzzle game about the quiet joy of finishing a toy bridge.
+        Every round starts with a grid of image cards, each holding a color and a height value. Tap one card,
+        then tap a neighbor to swap them. When three or more cards of the same color line up along a row or
+        column, they bind into an arch, glowing softly to show the connection. Once an edge-to-edge arch closes,
+        a gentle path is drawn across the board with rounded line segments. When every required bridge is closed,
+        a small toy car rolls across your finished crossing, with haptics marking every milestone along the way.
+      </p>
+    </section>
+
+    <section>
+      <h2>Four Modes, Every Pace</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Skyline Studio</h3>
+          <p>Two players pass the iPhone back and forth; whoever closes the last bridge wins the round.</p>
+        </div>
+        <div class="feature">
+          <h3>Stream Camp</h3>
+          <p>A casual, timer-free sandbox for a slow afternoon by the water — great for practicing tricky swaps.</p>
+        </div>
+        <div class="feature">
+          <h3>Bridge Workshop</h3>
+          <p>Bring your own photos and design up to five custom puzzles, replayable any time.</p>
+        </div>
+        <div class="feature">
+          <h3>Daily Crossing</h3>
+          <p>A fresh seeded puzzle every day so a quick session always feels new, with streak rewards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What's Inside</h2>
+      <ul>
+        <li>Custom card art captured with the camera or picked from your photo library.</li>
+        <li>Up to five saved bridges, each renameable, deletable, and replayable.</li>
+        <li>Transit Records tab: full history of every crossing — wins, losses, swaps used, duration, and the seed behind the puzzle — plus filters by mode.</li>
+        <li>Settings for haptic feedback, sounds, and auto-save, with a one-tap wipe for a fresh start.</li>
+        <li>No login, no signup, no account, no server. Every record, photo, and bridge stays on your iPhone.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Requirements</h2>
+      <p>
+        Bridge Maker Puzzle runs on iPhone with iOS 16 or later, in portrait only. The app is fully
+        offline and ready for the App Store today.
+      </p>
+    </section>
+
+    <section>
+      <h2>Support &amp; Policies</h2>
+      <p>
+        For questions, feedback, or support, please reach out via the contact email below.
+      </p>
+      <div class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="mailto:Mefepzavap@icloud.com">Mefepzavap@icloud.com</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Bridge Maker Puzzle. All rights reserved.</p>
+      <p><a href="mailto:Mefepzavap@icloud.com">Mefepzavap@icloud.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
